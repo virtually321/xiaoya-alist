@@ -61,6 +61,7 @@ mirrors=(
     "docker.luyao.dynv6.net"
     "freeno.xyz"
     "docker.1panel.live"
+    "dockerpull.com"
 )
 
 function root_need() {
@@ -290,7 +291,7 @@ function qrcode_aliyunpan_refreshtoken() {
             -e LANG=C.UTF-8 \
             --net=host \
             ddsderek/xiaoya-glue:python \
-            /aliyuntoken/aliyuntoken.py
+            /aliyuntoken/aliyuntoken_nn.ci.py
         INFO "清理镜像中..."
         docker rmi ddsderek/xiaoya-glue:python > /dev/null 2>&1
         INFO "操作全部完成！"
@@ -326,7 +327,7 @@ function qrcode_aliyunpan_opentoken() {
             -e LANG=C.UTF-8 \
             --net=host \
             ddsderek/xiaoya-glue:python \
-            /aliyunopentoken/aliyunopentoken.py
+            /aliyunopentoken/aliyunopentoken_nn.ci.py
         INFO "清理镜像中..."
         docker rmi ddsderek/xiaoya-glue:python > /dev/null 2>&1
         INFO "操作全部完成！"
